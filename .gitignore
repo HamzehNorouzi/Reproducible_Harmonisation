@@ -1,0 +1,12 @@
+# Python Environment
+.venv/
+__pycache__/
+*.pyc
+
+# Heavy Data Folders (Do NOT push gigabytes of data!)
+data/raw/
+data/interim/
+data/processed/
+
+# OS generated files
+.DS_Store

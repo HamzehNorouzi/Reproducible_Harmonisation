@@ -1,0 +1,53 @@
+
+--- Running HAR Validation Report ---
+
+Evaluating pretrain Split:
+  -> Shape Check ((7945, 6, 200)): PASS (Expected [N, 6, 200])
+  -> Array Integrity (No NaNs/Infs): PASS
+  -> Metadata Consistency: PASS (Found 7945 rows for 7945 windows)
+  -> Leakage Control (Subject IDs found): PASS
+
+Evaluating supervised Split:
+  -> Shape Check ((31803, 6, 100)): PASS (Expected [N, 6, 100])
+  -> Array Integrity (No NaNs/Infs): PASS
+  -> Metadata Consistency: PASS (Found 31803 rows for 31803 windows)
+  -> Leakage Control (Subject IDs found): PASS
+
+--- HAR Validation Complete ---
+
+HAR output validated!
+
+--- Running EEG Validation Report ---
+ -> Shape Check ((4765, 21, 640)): PASS
+ -> Array Integrity (No NaNs/Infs): PASS
+ -> Metadata Consistency (Sample Count): PASS
+ -> Event Validation (Only T1/T2): PASS
+ -> Leakage Control (Subject IDs found): PASS
+--- Validation Complete ---
+
+EEG output validated!
+
+--- Running ECG Validation Report ---
+
+Evaluating Train Split:
+  -> Shape Check ((17418, 12, 1000)): PASS (Expected [N, 12, 1000])
+  -> Array Integrity (No NaNs/Infs): PASS
+  -> Metadata Consistency: PASS (Found 17418 rows for 17418 windows)
+
+Evaluating Validation Split:
+  -> Shape Check ((2183, 12, 1000)): PASS (Expected [N, 12, 1000])
+  -> Array Integrity (No NaNs/Infs): PASS
+  -> Metadata Consistency: PASS (Found 2183 rows for 2183 windows)
+
+Evaluating Test Split:
+  -> Shape Check ((2198, 12, 1000)): PASS (Expected [N, 12, 1000])
+  -> Array Integrity (No NaNs/Infs): PASS
+  -> Metadata Consistency: PASS (Found 2198 rows for 2198 windows)
+
+Cross-Split Leakage Control:
+  -> Strict Patient Separation: PASS (0 overlapping patients between splits)
+  -> ECG Folds Reported: PASS (Folds properly mapped to splits)
+
+--- ECG Validation Complete ---
+
+ECG output validated!

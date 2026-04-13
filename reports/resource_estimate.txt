@@ -1,0 +1,13 @@
+
+==============================
+RESOURCE ESTIMATE SUMMARY
+==============================
+EEG:
+  - Runtime: 53.74 seconds
+  - Peak RAM: 1223.86 MB
+HAR:
+  - Runtime: 88.51 seconds
+  - Peak RAM: 1599.68 MB
+ECG:
+  - Runtime: 195.73 seconds
+  - Peak RAM: 1054.46 MB

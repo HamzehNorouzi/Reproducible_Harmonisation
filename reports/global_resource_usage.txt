@@ -1,0 +1,71 @@
+Traceback (most recent call last):
+  File "/home/hamzeh/Documents/ucl_execute/process_main.py", line 20, in <module>
+    (X_eeg, y_eeg, groups_eeg, runs_eeg, master_channel_schema), eeg_time, eeg_ram = track_resources(process_eeg,
+                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamzeh/Documents/ucl_execute/sources/tracking_resources.py", line 9, in track_resources
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamzeh/Documents/ucl_execute/sources/EEG_processor.py", line 160, in process_eeg
+    X, y_labels, channel_schema, rejected_in_file = load_and_epoch_eeg(filepath)
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamzeh/Documents/ucl_execute/sources/EEG_processor.py", line 62, in load_and_epoch_eeg
+    epochs = mne.Epochs(
+             ^^^^^^^^^^^
+  File "<decorator-gen-233>", line 10, in __init__
+  File "/home/hamzeh/Documents/ucl_execute/.venv/lib/python3.12/site-packages/mne/epochs.py", line 3621, in __init__
+    super().__init__(
+  File "<decorator-gen-216>", line 10, in __init__
+  File "/home/hamzeh/Documents/ucl_execute/.venv/lib/python3.12/site-packages/mne/epochs.py", line 679, in __init__
+    self.load_data()  # this will do the projection
+    ^^^^^^^^^^^^^^^^
+  File "/home/hamzeh/Documents/ucl_execute/.venv/lib/python3.12/site-packages/mne/epochs.py", line 747, in load_data
+    self._data = self._get_data()
+                 ^^^^^^^^^^^^^^^^
+  File "<decorator-gen-223>", line 12, in _get_data
+  File "/home/hamzeh/Documents/ucl_execute/.venv/lib/python3.12/site-packages/mne/epochs.py", line 1774, in _get_data
+    epoch_noproj = self._detrend_offset_decim(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<decorator-gen-220>", line 12, in _detrend_offset_decim
+  File "/home/hamzeh/Documents/ucl_execute/.venv/lib/python3.12/site-packages/mne/epochs.py", line 947, in _detrend_offset_decim
+    epoch[use_picks] = detrend(epoch[use_picks], self.detrend, axis=1)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamzeh/Documents/ucl_execute/.venv/lib/python3.12/site-packages/mne/filter.py", line 2072, in detrend
+    y = signal.detrend(x, axis=axis, type=fit)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamzeh/Documents/ucl_execute/.venv/lib/python3.12/site-packages/scipy/signal/_signaltools.py", line 4303, in detrend
+    coef, resids, rank, s = linalg.lstsq(A, newdata[sl])
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamzeh/Documents/ucl_execute/.venv/lib/python3.12/site-packages/scipy/_lib/_util.py", line 1181, in wrapper
+    return f(*arrays, *other_args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamzeh/Documents/ucl_execute/.venv/lib/python3.12/site-packages/scipy/linalg/_basic.py", line 1775, in lstsq
+    lwork, iwork = _compute_lwork(lapack_lwork, m, n, nrhs, cond)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hamzeh/Documents/ucl_execute/.venv/lib/python3.12/site-packages/scipy/linalg/lapack.py", line 1028, in _compute_lwork
+    def _compute_lwork(routine, *args, **kwargs):
+    
+KeyboardInterrupt
+Command terminated by signal 2
+	Command being timed: "python process_main.py"
+	User time (seconds): 89.31
+	System time (seconds): 0.40
+	Percent of CPU this job got: 492%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:18.22
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 406560
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 175176
+	Voluntary context switches: 641
+	Involuntary context switches: 1066
+	Swaps: 0
+	File system inputs: 1240
+	File system outputs: 8
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
